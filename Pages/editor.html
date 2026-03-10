@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor - DocsLite</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <section id="editor-banner" class="server-banner" hidden>
+      <p id="editor-banner-text">Checking connection...</p>
+      <button id="retry-connect-btn" class="secondary-btn" type="button">
+        Reconnect
+      </button>
+    </section>
+
+    <header class="topbar editor-topbar">
+      <div class="brand-wrap">
+        <p class="brand-kicker">Editing</p>
+        <input
+          id="doc-title"
+          class="doc-title-input"
+          type="text"
+          value="Untitled document"
+          aria-label="Document title"
+        />
+        <p id="save-status" class="status-text">Loading...</p>
+      </div>
+      <a class="secondary-btn" href="../index.html">Back to home</a>
+    </header>
+
+    <nav id="editor-toolbar" class="toolbar" aria-label="Editor toolbar">
+      <span class="ql-formats">
+        <select class="ql-header">
+          <option selected></option>
+          <option value="2"></option>
+        </select>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-bold" title="Bold"></button>
+        <button class="ql-italic" title="Italic"></button>
+        <button class="ql-underline" title="Underline"></button>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-list" value="ordered" title="Numbered list"></button>
+        <button class="ql-list" value="bullet" title="Bulleted list"></button>
+      </span>
+      <span class="ql-formats">
+        <button class="ql-align" value="" title="Align left"></button>
+        <button class="ql-align" value="center" title="Align center"></button>
+        <button class="ql-align" value="right" title="Align right"></button>
+      </span>
+    </nav>
+
+    <main class="editor-shell">
+      <section class="editor-paper-wrap">
+        <div id="editor" class="editor-paper"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js"></script>
+    <script src="../js/editor.js" defer></script>
+  </body>
+</html>

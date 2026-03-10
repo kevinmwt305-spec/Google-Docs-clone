@@ -1,0 +1,4 @@
+node_modules/
+dist/
+build/
+Server/data/documents.json

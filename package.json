@@ -1,0 +1,14 @@
+{
+  "name": "google-docs-clone",
+  "version": "1.0.0",
+  "description": "Simple Google Docs style clone for school assignment",
+  "main": "Server/server.js",
+  "scripts": {
+    "start": "node Server/server.js",
+    "dev": "node Server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}
