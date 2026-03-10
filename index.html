@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Docs Clone</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body class="home-page">
+    <header class="docs-navbar">
+      <div class="nav-left">
+        <button class="icon-btn" type="button" aria-label="Open menu">
+          &#9776;
+        </button>
+        <div class="docs-brand">
+          <span class="docs-logo" aria-hidden="true">D</span>
+          <span class="docs-word">Docs</span>
+        </div>
+      </div>
+
+      <div class="search-shell" role="search">
+        <span class="search-icon" aria-hidden="true">&#9906;</span>
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+
+      <div class="nav-right">
+        <button class="icon-btn" type="button" aria-label="Apps grid">
+          &#9638;
+        </button>
+        <span class="avatar-badge" aria-hidden="true">FS</span>
+      </div>
+    </header>
+
+    <section id="server-banner" class="server-banner" hidden>
+      <p id="server-banner-text">Checking connection...</p>
+      <button id="retry-server-btn" class="secondary-btn" type="button">
+        Retry Connection
+      </button>
+    </section>
+
+    <main>
+      <section class="template-strip">
+        <div class="container wide">
+          <div class="section-topline">
+            <h2>Start a new document</h2>
+            <p>Template gallery</p>
+          </div>
+
+          <div class="template-row">
+            <article
+              class="template-card blank-template"
+              id="new-document-btn"
+              role="button"
+              tabindex="0"
+              aria-label="Create new document"
+            >
+              <span class="plus-mark">+</span>
+              <h3>Blank document</h3>
+            </article>
+
+            <article
+              class="template-card"
+              data-template="resume-serif"
+              role="button"
+              tabindex="0"
+            >
+              <div class="template-preview lines"></div>
+              <h3>Resume</h3>
+              <p>Serif</p>
+            </article>
+
+            <article
+              class="template-card"
+              data-template="resume-coral"
+              role="button"
+              tabindex="0"
+            >
+              <div class="template-preview lines alt"></div>
+              <h3>Resume</h3>
+              <p>Coral</p>
+            </article>
+
+            <article
+              class="template-card"
+              data-template="letter"
+              role="button"
+              tabindex="0"
+            >
+              <div class="template-preview letter"></div>
+              <h3>Letter</h3>
+              <p>Spearmint</p>
+            </article>
+
+            <article
+              class="template-card"
+              data-template="project-proposal"
+              role="button"
+              tabindex="0"
+            >
+              <div class="template-preview project"></div>
+              <h3>Project proposal</h3>
+              <p>Tropic</p>
+            </article>
+
+            <article
+              class="template-card"
+              data-template="brochure"
+              role="button"
+              tabindex="0"
+            >
+              <div class="template-preview brochure"></div>
+              <h3>Brochure</h3>
+              <p>Geometric</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="recent-section">
+        <div class="container wide">
+          <div class="section-topline">
+            <h2>Recent documents</h2>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <h3>My Documents</h3>
+              <p>Last modified</p>
+            </div>
+            <ul
+              id="document-list"
+              class="document-list"
+              aria-live="polite"
+            ></ul>
+            <p id="empty-state" class="empty-state">
+              No documents yet. Create your first document above.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
