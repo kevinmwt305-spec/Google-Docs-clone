@@ -318,7 +318,7 @@ Google-Docs-clone/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/Google-Docs-clone.git
+git clone https://github.com/lewis-2000/Google-Docs-clone.git
 cd Google-Docs-clone
 ```
 
